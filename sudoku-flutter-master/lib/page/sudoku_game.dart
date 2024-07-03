@@ -483,7 +483,7 @@ class _SudokuGamePageState extends State<SudokuGamePage>
       });
     };
     return Container(
-        height: 50,
+        height: 80,
         padding: EdgeInsets.all(5),
         child: Row(children: <Widget>[
           // 暂停游戏
@@ -496,7 +496,9 @@ class _SudokuGamePageState extends State<SudokuGamePage>
                       onPressed: () {
                         _showHelpDialog(context);
                       },
-                      child: Text("Ayuda", style: TextStyle(fontSize: 15))))),
+                      child: Text("🛡️Ayuda",
+                          style:
+                              TextStyle(fontSize: 15, color: Colors.purple))))),
           Expanded(
               flex: 1,
               child: Align(
@@ -504,7 +506,7 @@ class _SudokuGamePageState extends State<SudokuGamePage>
                   child: CupertinoButton(
                       padding: EdgeInsets.all(5),
                       onPressed: pauseOnPressed,
-                      child: Text(pauseText, style: TextStyle(fontSize: 15))))),
+                      child: Text("Pausar", style: TextStyle(fontSize: 15))))),
           // tips 提示
           Expanded(
               flex: 1,
@@ -513,7 +515,7 @@ class _SudokuGamePageState extends State<SudokuGamePage>
                   child: CupertinoButton(
                       padding: EdgeInsets.all(5),
                       onPressed: tipsOnPressed,
-                      child: Text(tipsText, style: TextStyle(fontSize: 15))))),
+                      child: Text("Pistas", style: TextStyle(fontSize: 15))))),
           // mark 笔记
           Expanded(
               flex: 1,
@@ -523,7 +525,7 @@ class _SudokuGamePageState extends State<SudokuGamePage>
                       padding: EdgeInsets.all(5),
                       onPressed: markOnPressed,
                       child: Text(
-                          "${_markOpen ? closeMarkText : enableMarkText}",
+                          "${_markOpen ? "Cerrar notas" : "Abrir notas"}",
                           style: TextStyle(fontSize: 15))))),
           // 退出
           Expanded(
@@ -533,8 +535,7 @@ class _SudokuGamePageState extends State<SudokuGamePage>
                   child: CupertinoButton(
                       padding: EdgeInsets.all(5),
                       onPressed: exitGameOnPressed,
-                      child:
-                          Text(exitGameText, style: TextStyle(fontSize: 15)))))
+                      child: Text("Salir", style: TextStyle(fontSize: 15)))))
         ]));
   }
 
@@ -858,7 +859,7 @@ class _SudokuGamePageState extends State<SudokuGamePage>
   Widget build(BuildContext context) {
     log.d("on build");
     Scaffold scaffold = Scaffold(
-      appBar: AppBar(title: Text(widget.title), actions: [
+      appBar: AppBar(title: Text('Shield Sudoku'), actions: [
         IconButton(
           icon: Icon(Icons.info_outline),
           onPressed: () {

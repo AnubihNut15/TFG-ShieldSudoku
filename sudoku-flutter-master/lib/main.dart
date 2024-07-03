@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
               alignment: Alignment.center,
               child: Center(
-                  child: Text('Sudoku Application initializing...',
+                  child: Text('Iniciando Shield Sudoku App...',
                       style: TextStyle(color: Colors.black),
                       textDirection: TextDirection.ltr)));
         }
@@ -51,13 +51,13 @@ class MyApp extends StatelessWidget {
           log.w(snapshot.error);
         }
         SudokuState sudokuState = snapshot.data ?? SudokuState();
-        BootstrapPage bootstrapPage = BootstrapPage(title: "Loading");
-        SudokuGamePage sudokuGamePage = SudokuGamePage(title: "Sudoku");
+        BootstrapPage bootstrapPage = BootstrapPage(title: "Cargando");
+        SudokuGamePage sudokuGamePage = SudokuGamePage(title: "Shield Sudoku");
 
         return ScopedModel<SudokuState>(
           model: sudokuState,
           child: MaterialApp(
-            title: 'Sudoku',
+            title: 'Shield Sudoku',
             theme: ThemeData(
               // This is the theme of your application.
               //
