@@ -26,7 +26,7 @@ class HelpScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               ElevatedButton.icon(
-                // onPressed: () => _callNumber('112'),
+                onPressed: () => _callNumber('112'),
                 icon: Icon(Icons.phone, color: Colors.black),
                 label: Text('Llamar al 112'),
                 style: ButtonStyle(
@@ -38,7 +38,7 @@ class HelpScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               ElevatedButton.icon(
-                // onPressed: () => _callNumber('016'),
+                onPressed: () => _callNumber('016'),
                 icon: Icon(Icons.phone, color: Colors.yellow),
                 label: Text('Llamar al 016'),
                 style: ButtonStyle(
